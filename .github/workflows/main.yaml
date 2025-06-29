@@ -35,5 +35,5 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USER_NAME }}/myapp:0.1.0  # Corrected secret name
-            ${{ secrets.DOCKER_HUB_USER_NAME }}/myapp:${{ github.sha }} # Corrected secret name
+            ${{ secrets.DOCKER_HUB_USER_NAME }}/myapp:0.1.0  
+            ${{ secrets.DOCKER_HUB_USER_NAME }}/myapp:${{ github.sha }}
