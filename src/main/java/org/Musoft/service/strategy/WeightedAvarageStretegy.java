@@ -1,4 +1,4 @@
-package org.Musoft.strategy;
+package org.Musoft.service.strategy;
 
 import org.Musoft.model.Student;
 
@@ -15,7 +15,7 @@ public class WeightedAvarageStretegy implements IAvarageStrategy {
                 .map(student -> {
                     List<Double> grades = student.getGrades();
 
-                    if (grades.isEmpty() ||grades.size() < WEIGHTS.length) {
+                    if (grades == null || grades.isEmpty() || grades.size() < WEIGHTS.length) {
                         return 0.0;
                     }
 
