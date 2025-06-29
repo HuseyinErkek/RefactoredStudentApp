@@ -35,4 +35,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USER_NAME }}/myapp:0.1.0
+          tags: ${{ secrets.DOCKER_HUB_USER_NAME }}/myapp:${{ github.sha }}
