@@ -11,6 +11,8 @@ public class AverageCalculatorService {
     private ILogger logger;
 
     public AverageCalculatorService(IAvarageStrategy strategy, ILogger logger) {
+        if (strategy == null) throw new IllegalArgumentException("Strategy cannot be null");
+        if (logger == null) throw new IllegalArgumentException("Logger cannot be null");
         this.strategy = strategy;
         this.logger = logger;
     }
