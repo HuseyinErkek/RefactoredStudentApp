@@ -34,5 +34,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags:
-            ${{ secrets.DOCKER_HUB_USER_NAME }}/myapp:${{ github.sha }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
