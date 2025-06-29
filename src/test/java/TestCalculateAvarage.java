@@ -9,7 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class testCalculateAvarageTest {
+class TestCalculateAvarage {
     @Test
     public void testCalculateAverage() {
         List<Student> students = Arrays.asList(
