@@ -34,7 +34,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          secrets: |
-              GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
+          tags: huseyinerkek/student-app:latest
