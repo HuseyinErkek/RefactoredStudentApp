@@ -1,4 +1,4 @@
-package org.Musoft.strategy;
+package org.Musoft.service.strategy;
 
 import org.Musoft.model.Student;
 
@@ -10,10 +10,16 @@ public class SimpleAverageStrategy implements IAvarageStrategy {
     @Override
     public List<Double> calculateAverage(List<Student> students) {
         return students.stream()
-                .map(student -> student.getGrades().stream()
-                        .mapToDouble(Double::doubleValue)
-                        .average()
-                        .orElse(0.0))
+                .map(student -> {
+                    List<Double> grades = student.getGrades();
+                    if (grades == null || grades.isEmpty()) {
+                        return 0.0;
+                    }
+                    return grades.stream()
+                            .mapToDouble(Double::doubleValue)
+                            .average()
+                            .orElse(0.0);
+                })
                 .collect(Collectors.toList());
     }
 }
