@@ -37,9 +37,8 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./Dockerfile     # doğru input adı
+          file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USER_NAME }}/myapp:0.1.0
-            ${{ secrets.DOCKERHUB_USER_NAME }}/myapp:${{ github.sha }}
-
+            ${{ secrets.DOCKER_HUB_USER_NAME }}/myapp:0.1.0  # Corrected secret name
+            ${{ secrets.DOCKER_HUB_USER_NAME }}/myapp:${{ github.sha }} # Corrected secret name
