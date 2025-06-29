@@ -1,4 +1,4 @@
-package org.Musoft.strategy;
+package org.Musoft.service.strategy;
 
 import org.Musoft.model.Student;
 
