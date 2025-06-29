@@ -1,0 +1,13 @@
+
+services:
+  student-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        JAR_FILE: target/RefactoredStudentApp-1.0-SNAPSHOT-jar-with-dependencies.jar
+    container_name: student-app-container
+    image: huseyinerkek/student-app
+    ports:
+      - "8080:8080"
+    restart: no
