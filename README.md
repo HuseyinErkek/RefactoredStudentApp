@@ -8,7 +8,7 @@ Uygulama, Clean Code prensiplerine göre yazılmış, **Docker**, **Docker Compo
 
 ---
 
-## 🔧 Teknolojiler ve Araçlar
+## 🔧 Teknolojiler ve Araçlar 
 
 - ✅ Java 17  
 - ✅ Maven  
